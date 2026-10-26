@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#E9F0E1">
+  <title>Protéines du jour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="date" id="date"></p>
+
+    <section class="total" aria-live="polite">
+      <span class="number" id="total">0</span>
+      <span class="unit">g de protéines</span>
+    </section>
+
+    <button class="plus" id="open" type="button" aria-label="Ajouter des protéines">+</button>
+
+    <ul class="entries" id="entries"></ul>
+    <p class="empty" id="empty">Rien d’ajouté aujourd’hui. Appuie sur + pour commencer.</p>
+  </main>
+
+  <div class="sheet" id="sheet" hidden>
+    <div class="panel" role="dialog" aria-labelledby="sheet-title">
+      <label id="sheet-title" for="amount">Combien de grammes ?</label>
+      <input id="amount" type="number" inputmode="decimal" min="0" step="any" placeholder="ex. 10" autocomplete="off">
+      <p class="error" id="error" hidden></p>
+      <div class="actions">
+        <button type="button" class="ghost" id="cancel">Annuler</button>
+        <button type="button" class="solid" id="add">Ajouter</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
